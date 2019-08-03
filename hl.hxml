@@ -1,0 +1,4 @@
+build.hxml
+-lib hlsdl
+--macro addMetadata('@:build(CompilerUtil.setIntConstField("SDL_WINDOW_RESIZABLE", "0"))', 'sdl.Window')
+
