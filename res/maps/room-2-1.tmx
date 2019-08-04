@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="9">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBxgPFBg1P6Bs3+g438w2T8Qbhjo/IjLLnq7YRSMbDDQ9dFo+T9q/0i0H9kNI93+gcQA2bIAdw==
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="58" y="350">
+   <point/>
+  </object>
+  <object id="3" name="player2" x="939" y="382">
+   <point/>
+  </object>
+  <object id="4" name="wizard" x="32" y="64">
+   <point/>
+  </object>
+  <object id="5" name="crystal" x="857" y="386">
+   <point/>
+  </object>
+  <object id="6" name="warpb" x="2" y="290" width="18" height="156">
+   <properties>
+    <property name="dest" value="1-1"/>
+   </properties>
+  </object>
+  <object id="7" name="warpf" x="1003" y="323" width="19" height="155">
+   <properties>
+    <property name="dest" value="3-1"/>
+   </properties>
+  </object>
+  <object id="8" name="dialogue" x="609" y="321" width="62" height="127">
+   <properties>
+    <property name="dialogue" value="Well well. You thought this one would be as easy as the last one?;You thought that THE WICKED MAGE would not challenge you?;\;Yeah-;\;QUIET;This one is your INVISIBLE LABYRINTH. With only one path to get through hahahaha!"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztVEkOACEIg/9/eu6EVKh15GATozFgsSxuZj5k/QEP54n8rG5Vm2iv/E/VRqX7Dn/mw+jZvY87yg+LlRZZHlAsSn6Ue9UM6eZRDZWOj/8s/269dWsRxdmNvYpVL97gV/Zx9U00h1l0/KfxM/qx9Z/V2skZXHl3Cv/N9QGyVgEX
+  </data>
+ </layer>
+</map>

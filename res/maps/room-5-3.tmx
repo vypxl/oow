@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="9">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztlMEKACAIQ/P/f7pjMZoJmnZQCMKRb6NojFUCe4Ee9m8am6edRx8nX1bt5k3jW3MwL14+m5uVX2NE3v8P62VVsnc+0zL5mLsqfxX/x/zWNxmhnfJn8pmWwff+R81vfvObH82fpS0BVA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="68" y="283">
+   <point/>
+  </object>
+  <object id="3" name="dialogue" x="48" y="203" width="131" height="176">
+   <properties>
+    <property name="dialogue" value="CORRECT!!!;Ok, question three:;How many wall tiles did the developer have to place by hand for this game?;A:He did not count them;B:69;C:420;PICK YOUR ANSWER;\;STOP-;\;B-But.. Don't you like my trivia quiz?;\NO-;\;I just thought you would have fun with it..;Just leave me alone.."/>
+   </properties>
+  </object>
+  <object id="4" name="warpb" x="4" y="230" width="16" height="145">
+   <properties>
+    <property name="dest" value="4-1"/>
+   </properties>
+  </object>
+  <object id="5" name="warpf" x="164" y="742" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-4"/>
+   </properties>
+  </object>
+  <object id="6" name="warpf" x="390" y="744" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="7" name="warpf" x="612" y="744" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="8" name="wizard" x="17" y="20">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DgACMdMCH7aQlobf6o/aP2U2I/sfmFEjlSwKj9o/aP2j9q/6j99LEfABxWAG0=
+  </data>
+ </layer>
+</map>

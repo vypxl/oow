@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="5">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztk0EOADAEBPn/p3tvQrtYLiR7w0yiVRHRzeYRqyaYHR6ZmmR7Dpm+uz/iEO3xXJEZFv9nDtnJcED3ReYquB0OVX+y0jvq0c3POmTZyC0YbPQtMGLV8peP5gBgiAII
+  </data>
+ </layer>
+ <objectgroup id="3" name="obj">
+  <object id="1" name="player1" x="491" y="660">
+   <point/>
+  </object>
+  <object id="2" name="player2" x="961" y="286">
+   <point/>
+  </object>
+  <object id="3" name="warpb" x="422" y="746" width="182" height="20">
+   <properties>
+    <property name="dest" value="4-2"/>
+   </properties>
+  </object>
+  <object id="4" name="warpf" x="1007" y="225" width="16" height="158">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="2" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztlUsKgDAQQ+v9L+1WpO28xFhEGnBTxnmZj7a1ra/rKJ4VTBKXZjvvPPWSqKWXg84u1cd7fpKX1K705xpL+SSfMmtlJ5zaqQcit57k96f0St0vynHm5e5lFaP4TO3ZzAvxkOaPWL1zel+4ms2iYqT+7aPznof0XV319m1t/r/4JxCtAIE=
+  </data>
+ </layer>
+</map>

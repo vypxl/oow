@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="8">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJzllDEOACAIA+H/n3Y3DEgL1UjiJtyJqJuZX7aiUDDZoWS/4DDlwpgHxBXhIz3rfIMMJlqnkpeJqjvr31HykbtT8zP5LD7Df6+Fsqt8tOcRt8Pr5My/8LN7p/nK2VM4THogDgvOdwHR
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="wizard" x="864" y="545.333">
+   <point/>
+  </object>
+  <object id="2" name="player1" x="62.6667" y="373.333">
+   <point/>
+  </object>
+  <object id="3" name="player2" x="573.333" y="669.333">
+   <point/>
+  </object>
+  <object id="4" name="warpb" x="0" y="320" width="20" height="158.667">
+   <properties>
+    <property name="dest" value="2-1"/>
+   </properties>
+  </object>
+  <object id="5" name="warpf" x="545.333" y="748" width="222.667" height="17.3333">
+   <properties>
+    <property name="dest" value="3-2"/>
+   </properties>
+  </object>
+  <object id="7" name="dialogue" x="610.667" y="420" width="152" height="94.6667">
+   <properties>
+    <property name="dialogue" value="\;Heywhatdoyouactuallywantfromme-;\;STOP AVOIDING MY CURSE! You can't just concatenate all your words and circumvent the rules!;Nevermind, to you question: isn't it obvious? I just wanted some fun in my life.;Ain't I allowed to have fun? What's you problem?;The good thing is, I am safe, you have to suffer. GO ON SLAVE HAHAHAHAHAHAHA"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzllkkOwDAIA9P/f7rXtGJxTO1LLeXQBcaJAGWtp65iqYRwKl8nK8vrUMRysTMPzv3vzPezo84yfuQFycF67eIQf8yZnfRY9T16jzCr/uv2wfjqvKFCzlg5W9B6ZOKQvBP+1MO0F9V8pG6R+KgHJj2B8js/LFs9z7+Y4Uq+Wsws/AN/9+C4s07/cXiodAPlJQCN
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="8">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztlEsKACAIRO3+l24f+JkcqbABN6I+M2uIyEiaJST/Jj5TKL9KmTladRi9VOV6sZrPy+nMR3Sa76ly9xB+tG4nftTn1dfi2awMH82Nxr7MR7RzV1ZPaG+Rc2qzQfmsN/D5e/vH+gPXOidsAi05ATY=
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="640" y="64">
+   <point/>
+  </object>
+  <object id="2" name="player2" x="930.667" y="256">
+   <point/>
+  </object>
+  <object id="3" name="wizard" x="32" y="32">
+   <point/>
+  </object>
+  <object id="4" name="crystal" x="160" y="608">
+   <point/>
+  </object>
+  <object id="5" name="warpb" x="544" y="1.33333" width="222.667" height="20">
+   <properties>
+    <property name="dest" value="3-1"/>
+   </properties>
+  </object>
+  <object id="6" name="warpf" x="1005.33" y="162.667" width="17.3333" height="252">
+   <properties>
+    <property name="dest" value="4-2"/>
+   </properties>
+  </object>
+  <object id="7" name="dialogue" x="190.667" y="100" width="641.333" height="94.6667">
+   <properties>
+    <property name="dialogue" value="Ok, next exercise: in ONLY ONE of the squares, you crystal is located. Time to slip through walls!;\;Why-;\;I am doing this because I can, ok?;Now go find your stupid crystal."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzNVe0OABEM4/1f+v6LTb/kNJETrK1xNoaHac5XMUxDuFjtJBCv6H5SPuZm3OVJeEFjd31FpxpDY5j7z+g7/m7rM7iR/ySUu5f0NpfvyVPybF7X3+WazX+3fuVFPLHoOJCagOp3b7uj774zaP5dKGfVeUrWRLXuVnPKP1D1Vf3TGlUf2Zuir+Sf5XN5/mgfbSwA3A==
+  </data>
+ </layer>
+</map>

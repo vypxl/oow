@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="9">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztlNsKACAIQ/P/f7rHYjQVLO3BIAhHno0uY6whsBaoYd3SWD9tP/o4+fJqljeN783BvET5rG9Wfo1x8/x/mC9HJXvnMy2Tj7mr8lfxq/N73qt2V6LaKX8mn2kZ/Oh/1PzmN7/5t/kTpTUBVA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="68" y="283">
+   <point/>
+  </object>
+  <object id="3" name="dialogue" x="48" y="203" width="131" height="176">
+   <properties>
+    <property name="dialogue" value="CORRECT!!!;Ok, question two:;\;Thatwasnotaquestion!-;\;STOP QUESTIONING ME IM TRYING TO RUN A QUIZ;How many rooms have you successfully traversed?;A:12;B:9;C:1337;PICK YOUR ANSWER WOHOO"/>
+   </properties>
+  </object>
+  <object id="4" name="warpb" x="4" y="230" width="16" height="145">
+   <properties>
+    <property name="dest" value="4-1"/>
+   </properties>
+  </object>
+  <object id="5" name="warpf" x="164" y="742" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="6" name="warpf" x="390" y="743" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-3"/>
+   </properties>
+  </object>
+  <object id="7" name="warpf" x="612" y="744" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="8" name="wizard" x="16" y="19">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DgACMdMCH7aQlobf6o/aP2U2I/sfmFEjlSwKj9o/aP2j9q/6j99LEfABxWAG0=
+  </data>
+ </layer>
+</map>

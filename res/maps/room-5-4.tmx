@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="8">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAFjAzYASONMDZ7Btp+fOLDzX5i3DSS7McF6G3fqP30tR+fu+iV9kbxKB7Fo3gUj2J6YQDvYgKs
+  </data>
+ </layer>
+ <objectgroup id="3" name="obj">
+  <object id="1" name="player1" x="237" y="50">
+   <point/>
+  </object>
+  <object id="2" name="player2" x="30" y="250">
+   <point/>
+  </object>
+  <object id="3" name="wizard" x="32" y="31">
+   <point/>
+  </object>
+  <object id="4" name="crystal" x="223" y="257">
+   <point/>
+  </object>
+  <object id="5" name="warpb" x="162" y="-1" width="157" height="18">
+   <properties>
+    <property name="dest" value="4-1"/>
+   </properties>
+  </object>
+  <object id="6" name="warpf" x="3" y="227" width="12" height="121">
+   <properties>
+    <property name="dest" value="4-4"/>
+   </properties>
+  </object>
+  <object id="7" name="dialogue" x="97" y="224" width="60" height="93">
+   <properties>
+    <property name="dialogue" value="I have to tell you something.;I really only came to this land because where I live, I have no friends.;I thought I could cheer some people up with my funny curse but it all backfired. Now I have ruined this world.; I am so sorry.;\;Itsalrightdontbesorry;Wecanliftthecursewiththebancrystalsright?;\;The problem is, you do not only ban the curse, but me.;Proceed as you wish, I can only regret what I've done."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="2" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAFjAzYAS5xaoPBYD82u0aS/aSIU9tuetvPiIbxqRtIMGo/7c3HlQ4IpQ1q2YvLLQMd9qNgFIyCUTAKhh8AAEu3ACY=
+  </data>
+ </layer>
+</map>

@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="wall.tsx"/>
  <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYBzFo3gUj+JRPIqHKCYXDKTd1LCfUkCMeeTYS22/EFI7UPE40GmYHvmI2naM4sGDAaA0Ap0=
+   eJxjZGBgYBzFo3gUDxmMDAbSbnQwUPbSwx0j2X5SwUDbT023EtJLS/uJ0UNt+4nVQ6q51IhnfGrpkc5oZe9gsR+XG6htxygePBgArnoCTA==
   </data>
  </layer>
  <objectgroup id="2" name="obj">
@@ -24,9 +24,9 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="3" name="walls" width="32" height="24">
+ <layer id="3" name="walls" width="32" height="24" visible="0">
   <data encoding="base64" compression="zlib">
-   eJzt0zEOACAIQ1G8/6XdXajYxuW/xMloI2AVAAAz62G5sn9wZ6t1ctbvvFPZU3Jv+9/d2c1NYrYUrrzpedc7lf6n/rCSg4wNITcATQ==
+   eJztlVEKACAIQ+v+l+4CoZvNhPKBf7VnhTRG0zQoc1O33VY/mV4vP6sPNu8lf+Q+1f7IHrSQnArQ/jKcnjtjzpg8ZB37/mwm4lPjedXZqF+BdYaTGY70UPnH/sYCvZMAXw==
   </data>
  </layer>
 </map>

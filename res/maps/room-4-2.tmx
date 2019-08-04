@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="8">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJzNk8ERACEIA7H/pq8CMYFFLzP8JJsRWBGxzNrJ9alWRa/5WQ4nI6HM0+V390TJR+Yl+N1dUef5mt/NoHgqIu+zck/UXXb6J9mTfGJmqs8t/smfzpC9I/nqH07y/9jvenT7T/tI9lTvwZHLJjNU2UQWij1ZH33GAcY=
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="wizard" x="430.667" y="462.667">
+   <point/>
+  </object>
+  <object id="2" name="player1" x="78.6667" y="249.333">
+   <point/>
+  </object>
+  <object id="3" name="player2" x="501.333" y="52">
+   <point/>
+  </object>
+  <object id="4" name="warpb" x="421.333" y="1.33333" width="185.333" height="17.3333">
+   <properties>
+    <property name="dest" value="3-2"/>
+   </properties>
+  </object>
+  <object id="5" name="warpf" x="2.66667" y="160" width="17.3333" height="190.667">
+   <properties>
+    <property name="dest" value="4-1"/>
+   </properties>
+  </object>
+  <object id="6" name="dialogue" x="433.333" y="649.333" width="106.667" height="78.6667">
+   <properties>
+    <property name="dialogue" value="Another challenge done, huh?;I don't know but I feel something's wrong around here...... Probably nothing.;You know what I thought about yesterday?;\;Nope-;\;About a movie quote.;\;Which-;\;'Why can't we go backwards... for once? Backwards, really fast. Fast as we can.';..;..;I liked that movie.;Sorry for bothering you, go on."/>
+   </properties>
+  </object>
+  <object id="7" x="185.333" y="308"/>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJy1VlsOwCAMcve/9H6NsQKFNjFZXAv04dxamn3g3WslrItT6VA0JvI4Mc5nVN+EVfxIw22/02+mztX+TS/rq/BX8Yk82T468+bk72hI9F/1nz7DqJZOP9n4qVma5k/NA6q/0x+Hn9HhzqQ6Yyo/4lDPfzfendEXvxO/YzD3goJb4TA+6nePtdR/xo43eedMYCm1TXMjLcpC9gP/dQCq
+  </data>
+ </layer>
+</map>

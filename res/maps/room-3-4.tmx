@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="7">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJzl1cENACAIQ1HYf2k3UBToN9qE8+sBgpuZPzbRUG51h0wo98SvDuXu+KRN+50h7VUHVUj7d//GvVP41N0rflvml2Z7dNjRDp32rIPCfX0GG6ABcA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="obj">
+  <object id="1" name="warpb" x="1004" y="62.6667" width="16" height="96">
+   <properties>
+    <property name="dest" value="4-4"/>
+   </properties>
+  </object>
+  <object id="3" name="player1" x="928" y="97.3333">
+   <point/>
+  </object>
+  <object id="4" name="wizard" x="320" y="384">
+   <point/>
+  </object>
+  <object id="6" name="dialogue" x="269.333" y="305.333" width="188" height="229.333">
+   <properties>
+    <property name="dialogue" value="So.;You think you have won, right?;How wrong you are..;You really thought you could lift a CURSE with some shiny crystals?;I just invented them for my fun.;Think back to your playing experience.;You progressed very linearly, correct?;Now look at the game name.;!O O W;You don't know what that means? I'll reveal it to you.;!ONLY ONE WAY;Just as you only had one way to choose to get to this room, you also only have one way to win the game.;Literally, think of the most simple one thing you could do to win.;Remember the movie quote.;!YOU LOSE;See?;!TRY AGAIN;Pls reload the game."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="2" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzVllsKACAIBO3+l+4Cagr7oIV+Sh0lESOwOsvD4G58HFyE1Fzm3025jNgTNksTPpPdxXfWruiviqHubRe74ne26Nx+4qOV1aOeqdm9i/16Q3GZMx+166h8pjFRdugcVLuIYn916QKFlgBp
+  </data>
+ </layer>
+</map>

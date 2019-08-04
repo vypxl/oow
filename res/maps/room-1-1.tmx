@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="6">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztlUESADAEA/n/p/uBHmhC2qnMOLJ7gZuZJ2uX0xnZPhbfwT6WA4vd4RBJN6/SAYmKi7pURcWNeg1/+Aqugq/aP+X+33z7qjxe/X+oA4v9Qy1cYAFU
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="479" y="60">
+   <point/>
+  </object>
+  <object id="2" name="player2" x="928" y="352">
+   <point/>
+  </object>
+  <object id="3" name="warpb" x="420" y="0" width="157" height="20">
+   <properties>
+    <property name="dest" value="1-0"/>
+   </properties>
+  </object>
+  <object id="4" name="crystal" x="457.333" y="390.667">
+   <point/>
+  </object>
+  <object id="5" name="warpf" x="1005.33" y="292" width="16" height="153.333">
+   <properties>
+    <property name="dest" value="2-1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztVkEKACAIy/9/untYOVuTIMFLNDelVq1hYeA6O1b8tzXsOG5qiNZm8ZuTCI7Bf4LN4tF+I3XUs0PrsnqOaPDmovKOWXz+z1/BWXX+x7uufLs9n1Hwr/xN5X2RPUwdmZrs968Cz/yDZPOV6BmCAF8=
+  </data>
+ </layer>
+</map>

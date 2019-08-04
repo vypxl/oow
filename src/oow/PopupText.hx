@@ -28,9 +28,9 @@ class PopupText extends Object {
 
     border = new Graphics(this);
     border.beginFill(0xffffff);
-    border.drawRect(128, 256, Main.WIDTH - 128, 512);
+    border.drawRect(128, 256, Main.WIDTH - 256, 256);
     border.beginFill(0);
-    border.drawRect(132, 260, Main.WIDTH - 136, 504);
+    border.drawRect(132, 260, Main.WIDTH - 264, 248);
     border.endFill();
 
     txt = new Text(hxd.res.DefaultFont.get(), this);
@@ -38,7 +38,8 @@ class PopupText extends Object {
     txt.x = 128;
     txt.y = 256;
     txt.scale(6);
-    txt.maxWidth = 400;
+    txt.maxWidth = 100;
+    txt.textAlign = MultilineCenter;
 
     visible = false;
   }
@@ -63,6 +64,7 @@ class PopupText extends Object {
     if (idx >= currentText.length) return;
 
     txt.text += "    " + currentText[currentIdx];
+    hxd.Res.word.play();
   }
 
   public function play(text : String, ?onfinish : Void -> Void) {

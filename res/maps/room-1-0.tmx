@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="6">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="8">
  <tileset firstgid="1" source="wall.tsx"/>
  <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.5">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFIxkw4sEDbT893IDLnlH7B4f9tHYHMf6npRuITf/0zJPYwEi2n95lIj430MpcQubTy3561wej9o/aP5LtBwB+1gCV
+   eJzt09sNACAIA0Dcf2kX8AFtiWIk8U84DNjMrF16VFHVZ3o4NYMTO8DUnjnZ/s7J9D1Olu91KvneHpC80X20BzaYmajsG3xPPaU98nd1kXvR3crwmb/8/XldtY+86RU/6q7yVT6a3wFl8wGM
   </data>
  </layer>
  <objectgroup id="2" name="obj">
@@ -15,7 +15,7 @@
   </object>
   <object id="4" name="dialogue" x="97" y="386" width="63" height="124">
    <properties>
-    <property name="dialogue" value="Hello i am the wizard!;Bow down before me!;!ONLY ONE WAY;That's what this is all about.;~I could really bother you the whole day but I'd rather continue with useful stuff;Like saying bye..."/>
+    <property name="dialogue" value="Hello, fellow VICTIM!;I am the one who did this, ha! What, you ask?;I brought the wicked curse of ONLYNESS over this land!;You see how everything only has ONE COLOR? AND NO BLACK IS NOT A COLOR.;Or how your surroundings suddenly only consist of only ONE WALL TILE?;This is all MY WORK!;~(Not the devs laziness);\;Who-;\;See how you are not able to form sentences with more then ONE WORD? Ha!;You asked who I was? I am..;!THE WICKED MAGE;Now try to find all the ban crystals to lift the curse, you fool!"/>
    </properties>
   </object>
   <object id="5" name="warpb" x="2" y="385" width="15" height="128">
@@ -23,10 +23,18 @@
     <property name="dest" value="0-0"/>
    </properties>
   </object>
+  <object id="6" name="player2" x="498.667" y="686.667">
+   <point/>
+  </object>
+  <object id="7" name="warpf" x="417.333" y="745.333" width="156" height="21.3333">
+   <properties>
+    <property name="dest" value="1-1"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="3" name="walls" width="32" height="24">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjILBBxiR8EDZj+wOWtmBD6O7ZaDASLZ/INMgshtoZS4x+Ywe/ic2L4yCUTAKqAMAuMwAIg==
+   eJztlTEOwCAMA+H/n+7UJULBiW01Qy0xAT4HRFjrrC0eVXX2KL0m8JkM7Pm/HgyXFeqhqJXlO/Tz8XWODBVPps9V+mbGcL2D6I+udbAn8BFvBz9mUfDRuuKcip9lybI5+BV9yVfef5d/m3f+CVNrd/beG7/LfQAJaQB0
   </data>
  </layer>
 </map>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="9">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJztlEsKACAIRPP+l25ZiD/QtMUIQTjkG1Fa6wSxO7Ecz3uaVs96z31IvqKa583iR/vQvGT5Wt2u/i1G5fx/OC9jkn3zNa2bH91X8Hv40Z2s0qb5ktbBz/5H4IMPPvjV/A191QFO
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="player1" x="68" y="283">
+   <point/>
+  </object>
+  <object id="3" name="dialogue" x="130" y="199" width="90" height="176">
+   <properties>
+    <property name="dialogue" value="Now, because everybody likes it:;!THE TRIVIA QUIZ;Oh, I'm so excited!;What does the games name stand for?;A: I don't know;B: Nobody knows;C: THE WICKED MAGE knows;Pick your answer! ONLY ONE is correct."/>
+   </properties>
+  </object>
+  <object id="4" name="warpb" x="4" y="230" width="16" height="145">
+   <properties>
+    <property name="dest" value="4-1"/>
+   </properties>
+  </object>
+  <object id="5" name="warpf" x="164" y="742" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="6" name="warpf" x="390" y="743" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-1"/>
+   </properties>
+  </object>
+  <object id="7" name="warpf" x="612" y="744" width="151" height="20">
+   <properties>
+    <property name="dest" value="5-2"/>
+   </properties>
+  </object>
+  <object id="8" name="wizard" x="16" y="22">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DgACMdMCH7aQlobf6o/aP2U2I/sfmFEjlSwKj9o/aP2j9q/6j99LEfABxWAG0=
+  </data>
+ </layer>
+</map>

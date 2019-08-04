@@ -16,6 +16,7 @@ enum abstract Char_AnimState(Int) to Int {
 class Character extends Object {
   var animState(default, set) = Idle;
   var anims : Array<Anim>;
+  var snd_walk : hxd.snd.Channel;
   var game : Game;
 
   public function new(game : Game) {
@@ -24,6 +25,7 @@ class Character extends Object {
     var spritesheet = hxd.Res.oow_character.toTile();
     var anim_idle = new Anim([spritesheet.sub(0, 0, 32, 32), spritesheet.sub(32, 0, 32, 32)], 3, this);
     var anim_walk = new Anim([spritesheet.sub(0, 32, 32, 32), spritesheet.sub(32, 32, 32, 32)], 6, this);
+    snd_walk = hxd.Res.walk.play(true);
     anims = [anim_idle, anim_walk];
     for (a in anims) { a.loop = true; }
 
@@ -55,6 +57,11 @@ class Character extends Object {
 
     anims[state].pause = false; 
     anims[state].visible = true;
+    snd_walk.volume = switch (state) {
+      case Idle: 0;
+      case Walk: 1;
+    }
     return state;
   }
 }
+

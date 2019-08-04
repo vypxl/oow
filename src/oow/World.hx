@@ -17,6 +17,7 @@ enum CollisionResult {
   Wall(x : Bool, y : Bool);
   WarpTo(dest : String, dir : Int);
   Dialogue;
+  Crystal;
 }
 
 typedef Warp = {
@@ -27,6 +28,8 @@ typedef Warp = {
 
 class Map extends Object {
   var data : TiledMapData;
+  var spritesheet : h2d.Tile;
+  var tiles : Array<h2d.Tile>;
   var walls : Array<Rect>;
   var warps : Array<Warp>;
   var tileGroup : TileGroup;
@@ -34,9 +37,14 @@ class Map extends Object {
   public var playerSpawn1 : Point;
   public var playerSpawn2 : Point;
   public var wizardSpawn  : Point = new Point(-100, -100);
+  public var crystalSpawn : Point = new Point(-100, -100);
+  var crystalCol : Rect = Rect.xywh(-100, -100, 0, 0);
+  public var crystalCollected : Bool = false;
   public var dialogue     : Array<String> = [];
   public var dialogueTrigger : Rect = Rect.xywh(-100, -100, 0, 0);
   public var dialogueDone = false;
+  public var boss = false;
+  public var bossTiles : Array<Point>;
 
   public function collide(obj : Object, mov : Point, checkWarp = false) : CollisionResult {
     var bounds  = Rect.fromBounds(obj.getBounds(), mov.x, mov.y);
@@ -48,6 +56,10 @@ class Map extends Object {
     }
 
     if (!dialogueDone && dialogueTrigger.collide(bounds)) return Dialogue;
+    if (!crystalCollected && crystalCol.collide(bounds)) {
+      crystalCollected = true;
+      return Crystal;
+    }
 
     var colx = false;
     var coly = false;
@@ -61,42 +73,67 @@ class Map extends Object {
     return None;
   }
 
-  public function new(data : TiledMapData, spritesheet : Tile, tiles : Array<Tile>, parent : Object) {
-    super(parent);
-    this.data = data;
+  public function removeBossWalls() {
+    tileGroup.clear();
+    walls = [];
+    initBackground(true);
+  }
 
+  function initBackground(ignoreBossTiles = false) {
     tileGroup = new TileGroup(spritesheet, this);
     walls = [];
-    warps = [];
-
-    var mapw = data;
 
     for (layer in data.layers) {
       if(layer.data != null) {
         for (y in 0...data.height) for (x in 0...data.width) {
           var tid = layer.data[x + y * data.width];
-          if (tid <= 0) continue;
+          if (
+              tid <= 0 || 
+              (
+               ignoreBossTiles && 
+               bossTiles.exists(t -> t.x == x * 32 && t.y == y * 32)
+               )
+              ) continue;
           if (layer.name == "walls") 
             walls.push(Rect.xywh(x * 32, y * 32,32, 32));
           else
             tileGroup.add(x * 32, y * 32, tiles[tid - 1]);
         }
       }
+    }
+  }
 
+  public function new(name : String, data : TiledMapData, spritesheet : Tile, tiles : Array<Tile>, parent : Object) {
+    super(parent);
+    this.name = name;
+    this.data = data;
+    this.spritesheet = spritesheet;
+    this.tiles = tiles;
+    warps = [];
+    bossTiles = [];
+
+    initBackground();
+    for (layer in data.layers)
       if (layer.objects != null) {
         for (o in layer.objects) {
-          switch (o.name) {
-            case "player1": playerSpawn1 = new Point(o.x, o.y);
-            case "player2": playerSpawn2 = new Point(o.x, o.y);
-            case "wizard" : wizardSpawn  = new Point(o.x, o.y);
-            case "dialogue" : { dialogueTrigger = Rect.xywh(o.x, o.y, o.width, o.height); dialogue = o.props["dialogue"].split(";"); }
+          switch (o.name) { case "player1": playerSpawn1 = new Point(o.x, o.y);
+            case "player2" : playerSpawn2 = new Point(o.x, o.y);
+            case "wizard"  : wizardSpawn  = new Point(o.x, o.y);
+            case "crystal" : { crystalSpawn = new Point(o.x, o.y); crystalCol = Rect.xywh(o.x, o.y, 32, 32); };
+            case "dialogue": { dialogueTrigger = Rect.xywh(o.x, o.y, o.width, o.height); dialogue = o.props["dialogue"].split(";"); }
             case "warpf"   : warps.push({ trigger: Rect.xywh(o.x, o.y, o.width, o.height), dir: 0, dest: o.props["dest"] });
             case "warpb"   : warps.push({ trigger: Rect.xywh(o.x, o.y, o.width, o.height), dir: 1, dest: o.props["dest"] });
+            case "boss"    : {
+              boss = true;
+              for (pos in o.props["remove_walls"].split(";")) {
+                var xy = pos.split("|").map(x -> Std.parseInt(x));
+                bossTiles.push(new Point(xy[0], xy[1]));
+              }
+            }
             case _:
           }
         }
       }
-    }
   }
 
   public function activate() {
@@ -109,7 +146,7 @@ class Map extends Object {
 
 class World extends Object {
   var maps : std.Map<String, Map>;
-  var map : Map;
+  public var map : Map;
 
   public function new(parent : h2d.Object) {
     super(parent);
@@ -120,7 +157,7 @@ class World extends Object {
     for (entry in hxd.Res.loader.load("maps")) {
       if (!entry.name.startsWith("room-")) continue;
       var name = entry.name.replace("room-", "").replace(".tmx", "");
-      var map = new Map(entry.to(TiledMap).toMap(), spritesheet, tiles, this);
+      var map = new Map(name, entry.to(TiledMap).toMap(), spritesheet, tiles, this);
       maps[name] = map;
       maps[name].visible = false;
     }
@@ -144,6 +181,9 @@ class World extends Object {
     }
     game.wizard.x = map.wizardSpawn.x;
     game.wizard.y = map.wizardSpawn.y;
+    game.crystal.x = map.crystalSpawn.x;
+    game.crystal.y = map.crystalSpawn.y;
+    game.crystal.visible = !map.crystalCollected;
   }
 
   public function loadMap(name : String, direction : Int, game : Game) {
@@ -168,6 +208,8 @@ class World extends Object {
             if (elapsed >= FADE_TIME) {
               game.alpha = 1;
               timer.stop();
+
+              if (name == "0-1") hxd.Res.snd_win.play();
             }
           }
         }, FADE_DELAY);
@@ -181,6 +223,7 @@ class World extends Object {
       case Wall(x, y): new Point(x ? 0 : mov.x, y ? 0 : mov.y);
       case WarpTo(dest, dir): { loadMap(dest, dir, game); return new Point(0, 0); }
       case Dialogue: { game.dialogue(map.dialogue); map.dialogueDone = true; return new Point(0, 0); }
+      case Crystal: { game.collectCrystal(); return mov; };
     }
   }
 }
