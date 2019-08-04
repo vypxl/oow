@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="4">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.4">
+  <data encoding="base64" compression="zlib">
+   eJzt1EsKACAIBFC7/6XbRjiaWUqkEC2qedCvEVFLblk1+nM/j3NjWqbH56ybvpT/o4+ytHyPf6Je9bl9RpnWM/P46B5K6yJ8ZJ3+f3bfodVH+dK8lbkWP7rKL7/88jNbByW/AL8=
+  </data>
+ </layer>
+ <layer id="2" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztzbENAAAMg7Dk/6e75wGGgsTsJik81Td/vW/+pq+vr6+vr69P+eQHvD4AcQ==
+  </data>
+ </layer>
+ <objectgroup id="3" name="obj">
+  <object id="1" name="player2" x="492" y="570">
+   <point/>
+  </object>
+  <object id="2" name="wizard" x="868" y="96">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

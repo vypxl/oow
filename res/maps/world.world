@@ -1,0 +1,11 @@
+{
+  "patterns": [
+    {
+      "regexp": "room-(\\d+)-(\\d+).tmx",
+      "multiplierX": 1024,
+      "multiplierY": 768,
+      "offsetX": 0,
+      "offsetY": 0
+    }
+  ]
+}

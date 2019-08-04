@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="6">
+ <tileset firstgid="1" source="wall.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="24" opacity="0.5">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIxkw4sEDbT893IDLnlH7B4f9tHYHMf6npRuITf/0zJPYwEi2n95lIj430MpcQubTy3561wej9o/aP5LtBwB+1gCV
+  </data>
+ </layer>
+ <objectgroup id="2" name="obj">
+  <object id="1" name="wizard" x="96" y="256">
+   <point/>
+  </object>
+  <object id="2" name="player1" x="48" y="448">
+   <point/>
+  </object>
+  <object id="4" name="dialogue" x="97" y="386" width="63" height="124">
+   <properties>
+    <property name="dialogue" value="Hello i am the wizard!;Bow down before me!;!ONLY ONE WAY;That's what this is all about.;~I could really bother you the whole day but I'd rather continue with useful stuff;Like saying bye..."/>
+   </properties>
+  </object>
+  <object id="5" name="warpb" x="2" y="385" width="15" height="128">
+   <properties>
+    <property name="dest" value="0-0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBBxiR8EDZj+wOWtmBD6O7ZaDASLZ/INMgshtoZS4x+Ywe/ic2L4yCUTAKqAMAuMwAIg==
+  </data>
+ </layer>
+</map>

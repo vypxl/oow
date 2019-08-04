@@ -1,4 +1,4 @@
-package;
+package oow;
 
 using Lambda;
 import Util.*;
@@ -12,12 +12,11 @@ import hxd.Key;
 import h2d.Text;
 import h2d.Scene;
 
-class Main extends hxd.App {
-  static inline var WIDTH = 1024;
-  static inline var HEIGHT = 768;
-  var score : h2d.Text;
-  var lvl : h2d.Text;
+import oow.*;
 
+class Main extends hxd.App {
+  public static inline var WIDTH = 1024;
+  public static inline var HEIGHT = 768;
 
   function mkText(text : String, x : Int, y : Int, scale : Int, font : h2d.Font, ?parent : h2d.Object) : h2d.Text {
     var t = new h2d.Text(font, parent != null ? parent : s2d);
@@ -43,10 +42,7 @@ class Main extends hxd.App {
     });
     win.addEventTarget(onEvent);
 
-    var font = hxd.res.DefaultFont.get();
-    score = mkText("Score: 00000", 16, 16, 4, font);
-    lvl = mkText("Lvl 001", WIDTH - 180, 16, 4, font);
-
+    setScene(new Game(), true);
   }
 
   function onEvent(e : hxd.Event) {
