@@ -20,7 +20,7 @@
   </object>
   <object id="6" name="dialogue" x="269.333" y="305.333" width="188" height="229.333">
    <properties>
-    <property name="dialogue" value="So.;You think you have won, right?;How wrong you are..;You really thought you could lift a CURSE with some shiny crystals?;I just invented them for my fun.;Think back to your playing experience.;You progressed very linearly, correct?;Now look at the game name.;!O O W;You don't know what that means? I'll reveal it to you.;!ONLY ONE WAY;Just as you only had one way to choose to get to this room, you also only have one way to win the game.;Literally, think of the most simple one thing you could do to win.;Remember the movie quote.;!YOU LOSE;See?;!TRY AGAIN;Pls reload the game."/>
+    <property name="dialogue" value="So.;You think you have won, right?;How wrong you are..;You really thought you could lift a CURSE with some shiny crystals?;I just invented them for my fun.;Now, this world will be forever mine!;Only one proplem. You got a superpower.;\;What?-;\;Yes, it is called 'the reload button'.;I am so generous that I will even give you a hint:;Think back to your playing experience.;You progressed very linearly, correct?;Now look at the game name.;!O O W;You don't know what that means? I'll reveal it to you.;!ONLY ONE WAY;Just as you only had one way to choose to get to this room, you also only have one way to win the game.;Literally, think of the most simple one thing you could do to win.;Remember the movie quote.;!YOU LOSE;See?;!TRY AGAIN;Pls reload the game."/>
    </properties>
   </object>
  </objectgroup>

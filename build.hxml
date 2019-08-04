@@ -1,7 +1,6 @@
 -cp src
 -main oow.Main
 -lib heaps
--lib stb_ogg_sound
 -dce full
 -D resourcesPath=res
 
